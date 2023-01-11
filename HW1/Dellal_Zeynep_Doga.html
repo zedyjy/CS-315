@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Zeynep Doğa Dellal</h1>
+    <p>You can see the outputs from the console!</p>
+
+    <p id="demo"></p>
+
+    <script>
+//Loop through an associative array, apply a function, called foo, which simply prints the key-value pair
+//Loop through an associative array, apply a function, called foo, which simply prints the key-value pair
+function foo(key,value) {
+      console.log("Key :"+ k + ", value : " + value);
+  }
+
+var assocArr = {"color": "purple",
+                "number": 2,
+                "city": "ankara",
+                "class":"CS-315" };
+    
+    //Get the value for a given key
+    var colorInAssocArr = assocArr["color"];
+    console.log("\nGetting the value of color: "+ colorInAssocArr);
+
+    //Add a new element
+    assocArr['Language'] = 'dart';
+
+    //Remove an existing element
+    delete assocArr["class"];
+
+    //Modify the value of an existing element
+    assocArr['number'] = '13';
+
+    //Search for the existence of a key
+    let containsColor= "color" in assocArr;
+    let containsName =  "name" in assocArr;
+    console.log("\nSearching if color key exists: "+containsColor);
+    console.log("Searching if name key exists: "+containsName);
+
+
+    //Search for the existence of a value
+    let containsAnkara = Object.values(assocArr).includes("ankara");
+    let containsIstanbul = Object.values(assocArr).includes('istanbul');
+    console.log("\nSearching if ankara value exists: "+containsAnkara);
+    console.log("Searching if istanbul value exists: "+containsIstanbul);
+
+    //call the function foo
+    for (var k in assocArr) {
+        foo(k, assocArr[k]);
+   }                      
+    </script>
+</body>
+</html>

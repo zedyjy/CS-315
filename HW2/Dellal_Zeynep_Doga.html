@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Zeynep Doğa Dellal</h1>
+    <p>You can see the outputs from the console!</p>
+
+    <p id="demo"></p>
+
+    <script>
+  console.log("--UNCONDITIONAL CONTINUE--");
+  for (var i = 1; i < 5; i++) {
+    console.log(i);
+    continue;
+  }  
+    
+  console.log("--UNCONDITIONAL BREAK--");
+  for (var i = 1; i < 5; i++) {
+    console.log(i);
+    break;
+  }  
+
+  console.log("--UNLABELED CONTINUE--");
+  for (var i = 0; i < 5; i++) {
+    if (i == 3) {
+      continue;
+    }
+    console.log(i);
+  }
+
+  console.log("--UNLABELED BREAK--");
+  var i = 0;
+  while (i < 5) {
+    i++;
+    console.log(i);
+    if (i == 3) break;
+  }
+
+  console.log("--LABELED CONTINUE--");
+  labelforcontinue:
+  for (var i = 0; i <= 5; i++) {
+    for (var j = 0; j < 3; j++) {
+      if (i == j) {
+        continue labelforcontinue;
+      }
+    }
+    console.log(i);
+  }
+
+  console.log("--LABELED BREAK--");
+  var a = 1;
+  exitouterloop:
+  while (a < 5) {
+    while (a > 0) {
+        console.log(a);
+      if (a == 3) break exitouterloop;
+      a++;
+    }
+  }   
+    </script>
+</body>
+</html>
